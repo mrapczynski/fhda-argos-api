@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<portlet-app xmlns='http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd' version='1.0'>
+	<portlet>
+		<description>Personalized list of available reports that can be executed via Argos</description>
+		<portlet-name>Argos.MyReportsV2</portlet-name>
+		<display-name>My Reports</display-name>
+		<portlet-class>edu.fhda.luminis.argos.MyReportsPortlet</portlet-class>
+		<expiration-cache>0</expiration-cache>
+		<supports>
+			<mime-type>text/html</mime-type>
+			<portlet-mode>VIEW</portlet-mode>
+		</supports>
+		<resource-bundle>edu.fhda.luminis.argos.messages</resource-bundle>
+		<portlet-info>
+			<title>My Reports</title>
+			<short-title>My Reports</short-title>
+		</portlet-info>
+	</portlet>
+</portlet-app>

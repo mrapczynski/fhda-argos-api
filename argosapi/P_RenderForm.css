@@ -1,0 +1,34 @@
+html,body{margin:0px;padding:0px;font-size:12px;font-family:Helvetica,Verdana,Arial;}
+a:link{color:steelblue;}
+a:active{color:steelblue;}
+a:visited{color:steelblue;}
+a:hover{color:dodgerblue;}
+.opt-fixed-width{font-family:monospace;}
+span.text-subheading{color:#777777;font-style:italic;}
+#util-error{border:1px solid #bebebe;background-color:#eaeaea;padding:5px;font-size:11px;}
+
+div.layout-fixed-item{position:fixed;width:100%;overflow:hidden;}
+#layout-header{top:0px;height:30px;line-height:30px;color:#dedede;background:url(/fhda/argosapi/bg_header.png) repeat-x 0px 0px black;padding:0px 0px 0px 5px;font-weight:bold;border-bottom:1px solid #999999;}
+#layout-body{top:30px;bottom:30px;overflow:auto !important;}
+#layout-body-container{padding:10px;}
+#layout-footer{bottom:0px;height:30px;background:url(/fhda/argosapi/bg_footer.png) repeat-x 0px 0px #fafafa;border-top:1px solid #bebebe}
+
+#tbl-report-opts{border:1px solid #bebebe;width:100%;}
+#tbl-report-opts th,td{padding:5px;}
+#tbl-report-opts th{background:url(/fatcow.16/cog_edit.png) no-repeat 3px center #dedede;color:#777777;text-align:left;vertical-align:middle;padding-left:22px;height:20px;}
+#tbl-report-opts td > select{border:1px solid #bebebe;font-size:12px;width:60%;overflow:auto;}
+
+#format-buttons{height:100%;}
+#format-buttons td{color:white;vertical-align:middle;padding-left:24px;padding-right:5px;border-right:1px solid #bebebe;background-repeat:no-repeat;background-position:3px center;}
+td.format-pdf{background-image:url(/fhda/argosapi/file_extension_pdf.png);}
+td.format-xls{background-image:url(/fhda/argosapi/file_extension_xls.png);}
+td.format-csv{background-image:url(/fhda/argosapi/table_excel.png);}
+
+#Curtain{position:fixed;top:0px;left:0px;width:100%;height:100%;background-color:#222222;background-color:rgba(0,0,0,0.85);color:white;line-height:16px;font-size:12px;display:none;}
+#Curtain td{text-align:center;vertical-align:middle;}
+#ReadyCurtain{position:fixed;top:0px;left:0px;width:100%;height:100%;background-color:#222222;background-color:rgba(0,0,0,0.85);color:white;line-height:16px;font-size:12px;display:none;}
+#ReadyCurtain td{text-align:center;vertical-align:middle;}
+#ErrorCurtain{position:fixed;top:0px;left:0px;width:100%;height:100%;background-color:#222222;background-color:rgba(0,0,0,0.85);color:white;line-height:16px;font-size:12px;display:none;}
+#ErrorCurtain td{text-align:center;vertical-align:middle;}
+#ValidationCurtain{position:fixed;top:0px;left:0px;width:100%;height:100%;background-color:#222222;background-color:rgba(0,0,0,0.85);color:white;line-height:16px;font-size:12px;display:none;}
+#ValidationCurtain td{text-align:center;vertical-align:middle;}

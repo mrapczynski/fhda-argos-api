@@ -1,0 +1,24 @@
+SMAP
+MyReportsPortlet_005fview_jsp.java
+JSP
+*S JSP
+*F
++ 0 MyReportsPortlet_view.jsp
+WEB-INF/jsp/MyReportsPortlet_view.jsp
+*L
+1,5:52
+7,69:58
+75,10:127
+85,5:138
+89:143
+90:144,3
+91,3:147
+94,5:151
+98:156
+99:157,6
+100:163
+101,2:165
+102,4:167
+106,2:172
+107,7:174
+*E

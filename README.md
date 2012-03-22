@@ -20,7 +20,7 @@ The Argos API is a simple "straight through" pipeline, but in this implementatio
 
 ## Documentation
 
-The wiki feature of GitHub is used extensively to provide the remaining technical details. Please refer to the various articles for more information.
+As part of the project implementation at Foothill-De Anza, a developer's guide was created, and is actively maintained for the IT staff. A modified *open source version* of this guide is provided as part of the project. It is kept in the root folder and named "Developer's Guide.pdf". It will be kept up to date as part of any changes or additions made to the implementation source code.
 
 ## What Is In The Folders?
 

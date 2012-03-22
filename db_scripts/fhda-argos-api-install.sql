@@ -656,19 +656,7 @@ CREATE OR REPLACE PACKAGE BODY LUMINIS_WEB.ARGOS_WEB_V2 as
             html_select := replace(html_select, '%INITMSG%');
         end if;         
 
-
         htp.p(html_select);      
-        
-        -- REMOVED
-        -- July 5, 2011 (MRR)
-        -- Jerrick recommended this is unexpected and not required for fields that configured
-        -- to support multiple selections
-        /*
-        -- Is this a single select field? Add a wildcard
-        if field.field_multiplesel <> 'Y' then
-            htp.p('<option value="%">% - All</option>');
-        end if;
-        */
 
         -- If an SQL statement is available, and this widget is not event-bound then populate with results from the query          
         if field.field_sql is not null and field.field_binding is null then

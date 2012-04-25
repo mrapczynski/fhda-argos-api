@@ -120,8 +120,7 @@ function refreshDynamicList(select_element, dyn_value) {
 		$(select_element).html(bannerResult);
 		
 		// Reset any widgets bound this element
-		var boundElement = $('select[binding="' + select_element.name + '"]');
-		boundElement.html('<option>' + boundElement.attr('initmsg') + '</option>');
+		var boundElement = $('select[binding="' + select_element.name + '"]').html('<option>' + boundElement.attr('initmsg') + '</option>');
 	});	
 }
 

@@ -627,7 +627,7 @@ CREATE OR REPLACE PACKAGE BODY LUMINIS_WEB.ARGOS_WEB_V2 as
 
         -- Accepts multiple selections?
         if field.field_multiplesel = 'Y' then
-            html_select := replace(html_select, '%MULTIPLESEL% ', 'size="5" multiple="multiple" ');
+            html_select := replace(html_select, '%MULTIPLESEL%', 'size="5" multiple="multiple"');
         else
             html_select := replace(html_select, '%MULTIPLESEL% ');
         end if;
@@ -637,14 +637,14 @@ CREATE OR REPLACE PACKAGE BODY LUMINIS_WEB.ARGOS_WEB_V2 as
 
         -- Has dynamic AJAX binding?
         if field.field_binding is not null then
-            html_select := replace(html_select, '%BINDING% ', 'binding="' || field.field_binding || '"');
+            html_select := replace(html_select, '%BINDING%', 'binding="' || field.field_binding || '"');
         else
             html_select := replace(html_select, '%BINDING% ');
         end if;  
 
         -- Should the binding execute on first run?
         if field.field_binding_auto = 'Y' then
-            html_select := replace(html_select, '%BINDING_AUTO% ', 'binding_auto="Y"');
+            html_select := replace(html_select, '%BINDING_AUTO%', 'binding_auto="Y"');
         else
             html_select := replace(html_select, '%BINDING_AUTO% ');
         end if; 

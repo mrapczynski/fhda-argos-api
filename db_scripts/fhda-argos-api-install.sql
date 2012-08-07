@@ -100,11 +100,11 @@ CREATE TABLE ARGOS_API_METRICS  (
 )
 /
 
-CREATE INDEX LUMINIS_WEB.IDX_ARGOS_API_METRICS
+CREATE INDEX IDX_ARGOS_API_METRICS
 	ON LUMINIS_WEB.ARGOS_API_METRICS(REPORT_NAME, RUN_DATE)
 /
 
-CREATE INDEX LUMINIS_WEB.IDX_ARGOS_API
+CREATE INDEX IDX_ARGOS_API
 	ON LUMINIS_WEB.ARGOS_API_FORMS(REPORT_NAME, REPORT_TITLE, REPORT_CATEGORY, REPORT_ROLE)
 /
 
@@ -132,7 +132,7 @@ END;
 create or replace type varchar2_list as table of varchar2(128)
 /
 
-CREATE OR REPLACE PACKAGE LUMINIS_WEB.ARGOS_WEB_V2 as
+CREATE OR REPLACE PACKAGE ARGOS_WEB_V2 as
 
     -- Constants
     maps_api_url        constant    varchar2(64) := 'YOUR_ARGOS_SERVER';
@@ -204,7 +204,7 @@ CREATE OR REPLACE PACKAGE LUMINIS_WEB.ARGOS_WEB_V2 as
 
 end argos_web_v2;
 /
-CREATE OR REPLACE PACKAGE BODY LUMINIS_WEB.ARGOS_WEB_V2 as
+CREATE OR REPLACE PACKAGE BODY ARGOS_WEB_V2 as
     
     --------------------------------------------------------------------------------------------------------------------
     -- CORE PROCEDURES
@@ -627,7 +627,7 @@ CREATE OR REPLACE PACKAGE BODY LUMINIS_WEB.ARGOS_WEB_V2 as
 
         -- Accepts multiple selections?
         if field.field_multiplesel = 'Y' then
-            html_select := replace(html_select, '%MULTIPLESEL% ', 'size="5" multiple="multiple" ');
+            html_select := replace(html_select, '%MULTIPLESEL%', 'size="5" multiple="multiple"');
         else
             html_select := replace(html_select, '%MULTIPLESEL% ');
         end if;
@@ -637,14 +637,14 @@ CREATE OR REPLACE PACKAGE BODY LUMINIS_WEB.ARGOS_WEB_V2 as
 
         -- Has dynamic AJAX binding?
         if field.field_binding is not null then
-            html_select := replace(html_select, '%BINDING% ', 'binding="' || field.field_binding || '"');
+            html_select := replace(html_select, '%BINDING%', 'binding="' || field.field_binding || '"');
         else
             html_select := replace(html_select, '%BINDING% ');
         end if;  
 
         -- Should the binding execute on first run?
         if field.field_binding_auto = 'Y' then
-            html_select := replace(html_select, '%BINDING_AUTO% ', 'binding_auto="Y"');
+            html_select := replace(html_select, '%BINDING_AUTO%', 'binding_auto="Y"');
         else
             html_select := replace(html_select, '%BINDING_AUTO% ');
         end if; 

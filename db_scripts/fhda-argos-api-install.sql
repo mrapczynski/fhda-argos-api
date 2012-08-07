@@ -354,7 +354,7 @@ CREATE OR REPLACE PACKAGE BODY ARGOS_WEB_V2 as
         htp.p('<body>');
             -- Create header
             htp.p('<div id="layout-header" class="layout-fixed-item">');
-                htp.p('<img src="/fatcow.16/application_form.png" style="vertical-align: text-bottom;" />&nbsp; ');
+                htp.p('<img src="/argosapi/application_form.png" style="vertical-align: text-bottom;" />&nbsp; ');
                 htp.p(rec_report.report_title);
             htp.p('</div>');
 
@@ -459,7 +459,7 @@ CREATE OR REPLACE PACKAGE BODY ARGOS_WEB_V2 as
             -- Create error curtain
             htp.p('<table id="ErrorCurtain">');
                 htp.p('<tr><td>');
-                    htp.p('<b><img src="/fatcow.16/error.png" style="vertical-align:text-top;" /> &nbsp;&nbsp;Error!</b>');
+                    htp.p('<b><img src="/argosapi/error.png" style="vertical-align:text-top;" /> &nbsp;&nbsp;Error!</b>');
                     htp.p('<p>');
                     htp.p('<div style="position:relative;width:500px;left:50%;text-align:left;margin-left:-250px">');
                     htp.p('A serious problem occurred while trying to execute this report. Please contact the report author for assistance.');
@@ -470,7 +470,7 @@ CREATE OR REPLACE PACKAGE BODY ARGOS_WEB_V2 as
             -- Create curtain for validation errors
             htp.p('<table id="ValidationCurtain">');
                 htp.p('<tr><td>');
-                    htp.p('<b><img src="/fatcow.16/textfield_delete.png" style="vertical-align:text-top;" /> &nbsp;&nbsp;Found a problem!</b>');
+                    htp.p('<b><img src="/argosapi/textfield_delete.png" style="vertical-align:text-top;" /> &nbsp;&nbsp;Found a problem!</b>');
                     htp.p('<p>');
                     htp.p('<div id="ValidationMsg" style="position:relative;width:500px;left:50%;text-align:left;margin-left:-250px">');
                     htp.p('Message.');
@@ -547,7 +547,7 @@ CREATE OR REPLACE PACKAGE BODY ARGOS_WEB_V2 as
     begin
         -- Create a "friendly" error message
         htp.p('<div id="util-error" style="padding:5px;border:1px solid #bebebe;background-color:#eaeaea;font-size:11px;font-family:sans-serif;">');
-            htp.p('<img src="/fatcow.16/script_error.png" style="vertical-align:text-top" />');
+            htp.p('<img src="/argosapi/script_error.png" style="vertical-align:text-top" />');
             htp.p('<b>SQL Error</b><br/>');
             htp.p('<div style="font-family: monospace;margin-top:5px;">');
                 htp.p(replace(dbms_utility.format_error_stack, chr(10), '<br/>'));
@@ -569,9 +569,9 @@ CREATE OR REPLACE PACKAGE BODY ARGOS_WEB_V2 as
     begin
         -- Render the label and comments
         if rec_field.field_required = 'Y' then
-            htp.p('<img src="/fatcow.16/bullet_red.png" style="vertical-align:text-top" /><b>' || rec_field.field_label || '</b><br/>');
+            htp.p('<img src="/argosapi/bullet_red.png" style="vertical-align:text-top" /><b>' || rec_field.field_label || '</b><br/>');
         else
-            htp.p('<img src="/fatcow.16/bullet_blue.png" style="vertical-align:text-top" /><b>' || rec_field.field_label || '</b><br/>');
+            htp.p('<img src="/argosapi/bullet_blue.png" style="vertical-align:text-top" /><b>' || rec_field.field_label || '</b><br/>');
         end if;
         
         -- Conditionally render comments

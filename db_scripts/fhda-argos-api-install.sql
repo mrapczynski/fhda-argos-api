@@ -241,7 +241,7 @@ CREATE OR REPLACE PACKAGE BODY LUMINIS_WEB.ARGOS_WEB_V2 as
 
         -- Inject JavaScript
         htp.p('
-        <script type="text/javascript" src="/fhda/argosapi/shadowbox/shadowbox.js"></script>
+        <script type="text/javascript" src="/argosapi/shadowbox/shadowbox.js"></script>
         <script type="text/javascript">
             Shadowbox.init({
                 skipSetup: true
@@ -252,7 +252,7 @@ CREATE OR REPLACE PACKAGE BODY LUMINIS_WEB.ARGOS_WEB_V2 as
 
         -- Inject CSS
         htp.p('        
-        <link rel="stylesheet" type="text/css" href="/fhda/argosapi/shadowbox/shadowbox.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/argosapi/shadowbox/shadowbox.css" media="screen" />
         <style type="text/css">                  
             a.report-link:link { color: steelblue; }
             a.report-link:active { color: steelblue; }
@@ -260,8 +260,8 @@ CREATE OR REPLACE PACKAGE BODY LUMINIS_WEB.ARGOS_WEB_V2 as
             a.report-link:hover { color: dodgerblue; }
             div.icon { padding-left: 22px; background-repeat: no-repeat; background-position: left center; }
             div.reports-list { line-height: 20px; }
-            div.category-root { font-weight: bold; background-image: url(/fhda/argosapi/folder_page.png); }
-            div.report { margin-left: 15px; background-image: url(/fhda/argosapi/page_gear.png); }                        
+            div.category-root { font-weight: bold; background-image: url(/argosapi/folder_page.png); }
+            div.report { margin-left: 15px; background-image: url(/argosapi/page_gear.png); }                        
         </style>');
         htp.p('<p>');
 
@@ -288,7 +288,7 @@ CREATE OR REPLACE PACKAGE BODY LUMINIS_WEB.ARGOS_WEB_V2 as
         htp.p('
         <script type="text/javascript">
             Shadowbox.setup(''a.report-link'', {
-                title: ''<img src="/fhda/argosapi/argos_logo_30h.png" />'',
+                title: ''<img src="/argosapi/argos_logo_30h.png" />'',
                 displayCounter: false,
                 width: 800,
                 height: 650,
@@ -339,11 +339,11 @@ CREATE OR REPLACE PACKAGE BODY LUMINIS_WEB.ARGOS_WEB_V2 as
         -- BEGIN page header
         htp.p('<head>');
             -- Configure dependencies (JS + CSS)
-            htp.p('<script type="text/javascript" src="/latest-jquery/latest-jquery.js"></script>');
-            htp.p('<script type="text/javascript" src="/latest-jquery/jquery.base64.min.js"></script>');
-            htp.p('<script type="text/javascript" src="/latest-jquery/jquery.form.js"></script>');
-            htp.p('<script type="text/javascript" src="/fhda/argosapi/P_RenderForm.js"></script>');
-            htp.p('<link href="/fhda/argosapi/P_RenderForm.css" rel="stylesheet" type="text/css" />');
+            htp.p('<script type="text/javascript" src="/argosapi/jquery-1.6.2.min.js"></script>');
+            htp.p('<script type="text/javascript" src="/argosapi/jquery.base64.min.js"></script>');
+            htp.p('<script type="text/javascript" src="/argosapi/jquery.form.js"></script>');
+            htp.p('<script type="text/javascript" src="/argosapi/P_RenderForm.js"></script>');
+            htp.p('<link href="/argosapi/P_RenderForm.css" rel="stylesheet" type="text/css" />');
             htp.p('<script type="text/javascript">');
                 htp.p('var argos = {reportName: ''' || rec_report.report_name || '''};');
             htp.p('</script>');
@@ -439,7 +439,7 @@ CREATE OR REPLACE PACKAGE BODY LUMINIS_WEB.ARGOS_WEB_V2 as
             -- Create loading curtain
             htp.p('<table id="Curtain">');
                 htp.p('<tr><td>');
-                    htp.p('<b><img src="/fhda/argosapi/report-loader.gif" style="vertical-align:text-top;" /> &nbsp;&nbsp;Creating Report...</b>');
+                    htp.p('<b><img src="/argosapi/report-loader.gif" style="vertical-align:text-top;" /> &nbsp;&nbsp;Creating Report...</b>');
                     htp.p('<p>');
                     htp.p('<div style="position:relative;width:250px;left:50%;text-align:left;margin-left:-125px">');
                     htp.p('Depending on the report content, this may take a few seconds. Please wait patiently.');
@@ -450,7 +450,7 @@ CREATE OR REPLACE PACKAGE BODY LUMINIS_WEB.ARGOS_WEB_V2 as
             -- Create ready curtain (for iOS/mobile devices only)
             htp.p('<table id="ReadyCurtain">');
                 htp.p('<tr><td>');
-                    htp.p('<img src="/fhda/argosapi/accept.png" style="vertical-align:text-top;" />');
+                    htp.p('<img src="/argosapi/accept.png" style="vertical-align:text-top;" />');
                     htp.p('<br/><br/>');
                     htp.p('<a id="ReadyCurtain_Href" href="#" onclick="$(''#ReadyCurtain'').fadeOut(150);" target="_blank">Click to Download Report</a>');
                 htp.p('</td></tr>');
